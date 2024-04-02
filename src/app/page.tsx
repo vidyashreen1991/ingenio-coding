@@ -29,7 +29,7 @@ export default function Home() {
     return <div>{error}</div>
   }
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 bg-white">
+    <main className="flex min-h-screen flex-col items-center md:p-24 sm:p-0 bg-white">
         <div className="grid grid-cols-1 divide-y w-full">
         {advisors? advisors?.map((advisor: AdvisorType) => {
           return <Advisor key={advisor.id} {...advisor}></Advisor>

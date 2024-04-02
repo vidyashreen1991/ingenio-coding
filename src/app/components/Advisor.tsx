@@ -1,10 +1,10 @@
 "use client"
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { AdvisorType } from "../page";
 import Button from "./Button";
 
-export default function ({ name, price, pictureUrl, id, ...initialStatus }: AdvisorType){
+export default memo(function ({ name, price, pictureUrl, id, ...initialStatus }: AdvisorType){
     let interval: string | number | NodeJS.Timeout | null | undefined = null;
     const [status, setStatus] = useState<any>(null);
     const updateStatus = async function() {
@@ -62,4 +62,4 @@ export default function ({ name, price, pictureUrl, id, ...initialStatus }: Advi
             </Button>
         </div>
         </div>
-};
+});
